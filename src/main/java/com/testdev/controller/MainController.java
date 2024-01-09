@@ -14,4 +14,22 @@ public class MainController {
     public String getHello(){
         return "Hello All";
     }
+
+    // Pour admin
+    @GetMapping(path = "/protected" , produces = "application/json")
+    public String getProtected(){
+        return "Access sur Protected";
+    }
+    
+    // All
+    @GetMapping(path = "/public" , produces = "application/json")
+    public String getPublic(){
+        return "Access sur Public";
+    }
+
+    // User
+    @GetMapping(path = "/user" , produces = "application/json")
+    public String getUser(){
+        return "Access sur utilisateur";
+    }
 }
